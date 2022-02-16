@@ -12,9 +12,6 @@ headers = {}
 response = requests.request("GET", url, headers=headers, data=payload)
 characters = response.json()
 
-print(type(response.json()))
-
-
 @app.get("/")
 def index():
     return {"home": "sin datos"}
