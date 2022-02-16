@@ -17,5 +17,7 @@ def index():
     return {"home": "sin datos"}
 
 @app.get("/characters")
-def get_characters():
+def get_characters(species: str, gender: str | None = None):
+    if gender:
+        return characters
     return characters
